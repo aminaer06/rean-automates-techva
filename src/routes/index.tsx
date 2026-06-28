@@ -68,6 +68,7 @@ function rippleHandler(e: React.MouseEvent<HTMLElement>) {
 const nav = [
   { id: "services", label: "Services" },
   { id: "skills", label: "Skills" },
+  { id: "sample-work", label: "Sample Work" },
   { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
