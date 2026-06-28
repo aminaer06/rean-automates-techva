@@ -311,6 +311,35 @@ function Skills() {
   );
 }
 
+function SampleWork() {
+  return (
+    <section id="sample-work" className="py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionTitle
+          eyebrow="Portfolio"
+          title="Sample Web Design Work"
+          subtitle="A live project I built — click to explore the booking experience."
+        />
+        <div className="reveal mt-14 flex justify-center">
+          <a
+            href="https://mclife-works-website-2v90.bolt.host/#booking"
+            target="_blank"
+            rel="noreferrer"
+            onClick={rippleHandler}
+            className="relative overflow-hidden inline-flex items-center gap-3 rounded-2xl border border-border glass px-8 py-6 text-center transition-all hover:scale-105 hover:shadow-elegant"
+          >
+            <ExternalLink className="h-5 w-5 text-primary" />
+            <div>
+              <div className="font-display text-lg font-semibold">View Live Sample Project</div>
+              <div className="mt-1 text-xs text-muted-foreground">McLife Works — Booking Website</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const experience = [
   {
     role: "Sales Executive",
