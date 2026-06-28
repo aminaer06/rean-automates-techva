@@ -91,6 +91,7 @@ function Portfolio() {
         <Hero />
         <Services />
         <Skills />
+        <SampleWork />
         <Experience />
         <Contact />
       </main>
