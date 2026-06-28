@@ -69,7 +69,6 @@ const nav = [
   { id: "services", label: "Services" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
-  { id: "works", label: "Works" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -92,7 +91,6 @@ function Portfolio() {
         <Services />
         <Skills />
         <Experience />
-        <Works />
         <Contact />
       </main>
       <Footer />
@@ -188,9 +186,9 @@ function Hero() {
               className="relative overflow-hidden inline-flex items-center gap-2 rounded-full bg-grad-primary px-6 py-3 text-sm font-semibold text-white shadow-elegant transition-transform hover:scale-105">
               Start a project <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#works" onClick={rippleHandler}
+            <a href="#services" onClick={rippleHandler}
               className="relative overflow-hidden inline-flex items-center gap-2 rounded-full border border-border glass px-6 py-3 text-sm font-semibold transition-transform hover:scale-105">
-              View work
+              View services
             </a>
           </div>
           <div className="mt-10 grid max-w-md grid-cols-3 gap-6">
@@ -392,56 +390,6 @@ function Experience() {
   );
 }
 
-const works = [
-  {
-    title: "Lead Capture → CRM Automation",
-    tag: "n8n · GoHighLevel",
-    desc: "End-to-end pipeline that captures website leads, enriches them, drops them into GHL, and triggers a tailored email & SMS sequence.",
-  },
-  {
-    title: "Appointment Booking System",
-    tag: "GoHighLevel · Calendars",
-    desc: "Automated calendar booking with confirmation, reminder, and no-show recovery workflow built in GoHighLevel.",
-  },
-  {
-    title: "Sales Reporting Dashboard",
-    tag: "Excel · Reporting",
-    desc: "Weekly KPI dashboard with pipeline status, conversion funnel, and account performance — automatically refreshed.",
-  },
-  {
-    title: "Client Onboarding Flow",
-    tag: "n8n · Email · Forms",
-    desc: "Intake form triggers a multi-step onboarding sequence with document collection, welcome sequence, and CRM tagging.",
-  },
-];
-
-function Works() {
-  return (
-    <section id="works" className="py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <SectionTitle eyebrow="Sample Works" title="Selected projects" subtitle="Representative automations and ops systems — happy to walk through any of them live." />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
-          {works.map((w, i) => (
-            <div
-              key={w.title}
-              onClick={rippleHandler}
-              className="reveal group relative overflow-hidden rounded-2xl border border-border glass p-6 transition-all hover:-translate-y-1 hover:shadow-elegant cursor-pointer"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-grad-primary opacity-0 blur-3xl transition-opacity group-hover:opacity-30" />
-              <div className="flex items-start justify-between gap-4">
-                <span className="text-xs font-semibold uppercase tracking-widest text-grad">{w.tag}</span>
-                <ExternalLink className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </div>
-              <h3 className="mt-4 font-display text-2xl font-bold">{w.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{w.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Contact() {
   const [sent, setSent] = useState(false);
@@ -467,7 +415,7 @@ function Contact() {
             <h3 className="font-display text-xl font-bold">Direct channels</h3>
             <div className="mt-6 space-y-4 text-sm">
               <ContactRow icon={Mail} label="Email" value="rean.castillo.pineda20@gmail.com" href="mailto:rean.castillo.pineda20@gmail.com" />
-              <ContactRow icon={Phone} label="Phone / Viber" value="+63 951 329 3911" href="tel:+639513293911" />
+              <ContactRow icon={Phone} label="Phone / Viber" value="09513293913" href="tel:09513293913" />
               <ContactRow icon={Facebook} label="Facebook" value="facebook.com/kissnaer" href="https://facebook.com/kissnaer" />
               <ContactRow icon={Linkedin} label="Upwork" value="View profile" href="https://www.upwork.com/freelancers/~01f9fee7cdb9de9302" />
               <ContactRow icon={ExternalLink} label="OnlineJobs.PH" value="View profile" href="https://v2.onlinejobs.ph/jobseekers/info/5104901" />
