@@ -1,11 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import {
-  Moon, Sun, Mail, Phone, Facebook, ExternalLink, ArrowRight, Workflow,
-  Settings2, Calendar, MessageSquare, BarChart3, Bot, Sparkles, Briefcase,
-  GraduationCap, MapPin, Send, Linkedin
-} from "lucide-react";
+import { Moon, Sun, Mail, Phone, Facebook, ExternalLink, ArrowRight, Workflow, Settings2, Calendar, MessageSquare, ChartBar as BarChart3, Bot, Sparkles, Briefcase, GraduationCap, MapPin, Send, Linkedin } from "lucide-react";
 import photoAsset from "@/assets/rean-pineda.png.asset.json";
+import newPhoto from "@/assets/96c2b3bc-548a-42ff-a526-ccd6d10e8f47.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -213,9 +210,9 @@ function Hero() {
             <div className="absolute -inset-1 rounded-full bg-grad-primary animate-pulse-glow" />
             <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-background sm:h-80 sm:w-80 lg:h-96 lg:w-96">
               <img
-                src={photoAsset.url}
+                src={newPhoto}
                 alt="Rean Pineda — Technical Virtual Assistant"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 shadow-elegant animate-float">
